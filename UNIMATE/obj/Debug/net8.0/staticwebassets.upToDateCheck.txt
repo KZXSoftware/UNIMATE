@@ -1,0 +1,3 @@
+wwwroot\Script.js
+wwwroot\Style.css
+wwwroot\Index.html
