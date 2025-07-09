@@ -1,0 +1,540 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #f8f9fa;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images/UNIMATE_LOGO.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: -1;
+    transition: all 0.5s ease;
+    filter: blur(0px);
+}
+
+/* بقية الـ CSS كما هو */
+.qa-list {
+    max-width: 90%;
+    margin: 3rem auto;
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 254, 254, 0.1);
+}
+
+.qa-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.qa-question {
+    width: 100%;
+    text-align: right;
+    background: #f0f0f0;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 8px 8px 0 0;
+    transition: background 0.2s;
+}
+
+.qa-question.active, .qa-question:hover {
+    background: #e0e7ff;
+}
+
+.qa-answer {
+    display: none;
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    margin-bottom: 2rem;
+}
+
+.logo-img {
+    height: 60px;
+    margin-right: 1rem;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2d3a4b;
+}
+
+.main-logo-topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f8f9fa00;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.04);
+    max-width: 90%;
+}
+
+.main-logo-topic h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.7;
+    margin: 1rem 0;
+    color: #2d3a4b;
+    direction: rtl;
+}
+
+.main-logo-img {
+    height: 150px;
+    margin: 0 auto;
+}
+
+.main-topic-anchor {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1a237e;
+    text-decoration: none;
+}
+
+.main-topic-anchor:hover {
+    text-decoration: underline;
+}
+
+.contents-sidebar {
+    width: 220px;
+    background-color: #f8f9fa;
+    padding: 30px 15px;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 81px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    direction: rtl;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.contents-sidebar h2 {
+    color: #3498db;
+    padding: 0 10px 15px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.contents-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contents-list li {
+    margin-bottom: 8px;
+}
+
+.contents-list a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: all 0.3s;
+    position: relative;
+    border-radius: 4px;
+    background-color: #fafafa;
+    direction: rtl;
+    text-align: center; /* تم تعديله ليكون في المنتصف */
+    border-right: 3px solid #3498db;
+    border-left: none;
+}
+
+.contents-list a:hover {
+    background-color: #fafafa;
+    color: #3498db;
+    transform: translateX(3px);
+}
+.about {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.about-us {
+    margin-bottom: 50px;
+}
+
+.pic {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.text {
+    width: 100%;
+    max-width: 540px;
+    text-align: center;
+}
+
+.text h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.text h5 {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #4070f4;
+}
+
+.text p {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.data {
+    margin-top: 30px;
+}
+
+.hire {
+    font-size: 18px;
+    background: #4070f4;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.hire:hover {
+    background: #000;
+}
+
+/* القائمة الجانبية للموبايل */
+input[type="checkbox"] {
+    display: none;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: #4a4a4a;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    z-index: 9999;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#btn:checked + .menu-btn {
+    right: 247px;
+}
+
+.menu-btn i {
+    position: absolute;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn i.fa-times {
+    opacity: 0;
+}
+
+#btn:checked + .menu-btn i.fa-times {
+    opacity: 1;
+    transform: rotate(-180deg);
+}
+
+#btn:checked + .menu-btn i.fa-bars {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -270px;
+    background: #404040;
+    height: 100%;
+    width: 270px;
+    transition: all 0.3s ease;
+    z-index: 9998;
+}
+
+#btn:checked ~ #sidebar {
+    right: 0;
+}
+#sidebar {
+    direction: rtl; /* يجعل الاتجاه من اليمين لليسار */
+    text-align: center; /* يجعل المحتوى في المنتصف */
+}
+
+#sidebar .title {
+    line-height: 65px;
+    text-align: center;
+    background: #333;
+    font-size: 25px;
+    font-weight: 600;
+    color: #f2f2f2;
+    border-bottom: 1px solid #222;
+}
+
+#sidebar .list-items {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 0; /* إزالة الحشو الافتراضي */
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+#sidebar .list-items li {
+    line-height: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #333;
+    transition: all 0.3s ease;
+    text-align: center; /* توسيط النص داخل العناصر */
+}
+
+#sidebar .list-items li:hover {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0px 10px 3px #222;
+}
+
+#sidebar .list-items li:first-child {
+    border-top: none;
+}
+
+#sidebar .list-items li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    text-align: center; /* توسيط النص داخل الرابط */
+}
+
+#sidebar .list-items li a i {
+    margin-left: 20px; /* تعديل الهامش ليتناسب مع الاتجاه RTL */
+    margin-right: 0;
+}
+
+#sidebar .list-items .icons {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#sidebar .list-items .icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #f2f2f2;
+    background: #4a4a4a;
+    border-radius: 5px;
+    border: 1px solid #383838;
+    transition: all 0.3s ease;
+}
+
+#sidebar .list-items .icons a:hover {
+    background: #404040;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .contact-box {
+    flex: 1;
+    border: 2px solid #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff8f7;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 30px 25px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .contact-icon {
+    font-size: 40px;
+    color: #404040;
+    margin-bottom: 15px;
+  }
+  
+  .contact-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 22px;
+  }
+  
+  .contact-card p {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
+  }
+  
+  #emailLink {
+    color: #404040;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  #emailLink:hover {
+    color: #a1271c;
+  }
+
+/* وسائط الاستعلام للتكيف مع أحجام الشاشات المختلفة */
+@media (min-width: 768px) {
+    .main-logo-topic {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .main-logo-topic h1 {
+        text-align: right;
+        font-size: 1.5rem;
+    }
+    
+    .main-logo-img {
+        margin-left: 1rem;
+    }
+    
+    .about {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .text {
+        text-align: right;
+    }
+    
+    .top-bar {
+        padding: 0.5rem 2rem;
+    }
+    
+    .logo-img {
+        height: 80px;
+    }
+    
+    .site-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-logo-topic h1 {
+        font-size: 1.8rem;
+    }
+    
+    .main-logo-img {
+        height: 200px;
+    }
+    
+    .text h2 {
+        font-size: 45px;
+    }
+    
+    .text h5 {
+        font-size: 22px;
+    }
+    
+    .text p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .contents-sidebar {
+        display: none;
+    }
+}
